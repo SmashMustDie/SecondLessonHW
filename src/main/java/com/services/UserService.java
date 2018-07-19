@@ -11,9 +11,13 @@ import java.util.List;
 public class UserService {
 
     @Autowired
-    private UserDao userDao1;
+    private UserDao userDao;
 
     public List<User> getUserList() {
-        return userDao1.getUserList();
+        return userDao.getUserList();
+    }
+
+    public User getUserById(int id) {
+        return userDao.getUserById(id);
     }
 }

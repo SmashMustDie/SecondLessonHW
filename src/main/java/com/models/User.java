@@ -2,13 +2,34 @@ package com.models;
 
 public class User {
 
-    public User(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
+    private int id;
     private String name;
     private int age;
+    private String role;
+
+    public User(int id, String name, int age, String role) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.role = role;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public int getId() {
+
+        return id;
+    }
+
+    public String getRole() {
+        return role;
+    }
 
     public String getName() {
 
@@ -30,8 +51,10 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", age=" + age +
+                ", role='" + role + '\'' +
                 '}';
     }
 }
