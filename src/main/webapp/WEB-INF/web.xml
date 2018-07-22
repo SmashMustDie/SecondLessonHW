@@ -4,16 +4,15 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
 		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    
-    <listener>
-        <listener-class>
-            org.springframework.web.context.ContextLoaderListener
-        </listener-class>
-    </listener>
-   
+
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>/WEB-INF/spring-application.xml</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/spring-application-org.xml</param-value>
     </context-param>
 
     <servlet>
@@ -22,7 +21,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>mainServlet</servlet-name>
-        <url-pattern>/welcome</url-pattern>
+        <url-pattern>/com/welcome</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -35,6 +34,28 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/com/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>mainServletOrg</servlet-name>
+        <servlet-class>org.controller.MainServletOrg</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mainServletOrg</servlet-name>
+        <url-pattern>/org/welcome</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>dispatcher-org</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/spring-application-org.xml</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dispatcher-org</servlet-name>
+        <url-pattern>/org/</url-pattern>
     </servlet-mapping>
 </web-app>

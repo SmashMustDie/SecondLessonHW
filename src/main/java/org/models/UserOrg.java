@@ -1,13 +1,13 @@
-package com.models;
+package org.models;
 
-public class User {
+public class UserOrg {
 
     private int id;
     private String name;
     private int age;
     private String role;
 
-    public User(int id, String name, int age, String role) {
+    public UserOrg(int id, String name, int age, String role) {
         this.id = id;
         this.name = name;
         this.age = age;

@@ -1,12 +1,12 @@
-package com.models;
+package org.models;
 
-public class Item {
+public class ItemOrg {
 
     private int id;
     private String itemName;
-    private User holder;
+    private UserOrg holder;
 
-    public Item(int id, String itemName, User holder) {
+    public ItemOrg(int id, String itemName, UserOrg holder) {
         this.id = id;
         this.itemName = itemName;
         this.holder = holder;
@@ -28,11 +28,11 @@ public class Item {
         this.itemName = itemName;
     }
 
-    public User getHolder() {
+    public UserOrg getHolder() {
         return holder;
     }
 
-    public void setHolder(User holder) {
+    public void setHolder(UserOrg holder) {
         this.holder = holder;
     }
 

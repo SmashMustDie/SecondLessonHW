@@ -1,9 +1,9 @@
-package com.test;
+package test;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.services.ItemService;
 import com.services.UserService;
 import com.services.VaultService;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class UserSystemTest {
 

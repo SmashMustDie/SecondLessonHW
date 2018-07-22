@@ -1,14 +1,14 @@
-package com.models;
+package org.models;
 
 import java.util.List;
 
-public class Vault {
+public class VaultOrg {
 
     private int id;
     private String location;
-    private List<Item> content;
+    private List<ItemOrg> content;
 
-    public Vault(int id, String location, List<Item> content) {
+    public VaultOrg(int id, String location, List<ItemOrg> content) {
         this.id = id;
         this.location = location;
         this.content = content;
@@ -31,11 +31,11 @@ public class Vault {
         this.location = location;
     }
 
-    public List<Item> getContent() {
+    public List<ItemOrg> getContent() {
         return content;
     }
 
-    public void setContent(List<Item> content) {
+    public void setContent(List<ItemOrg> content) {
         this.content = content;
     }
 
